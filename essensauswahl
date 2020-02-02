@@ -1,0 +1,69 @@
+from random import *
+
+essen = ['Toskanische Brotsuppe', 'Basilikumsuppe', 'Tomate-Reis', 'Lachswürfel','Lachsfilet','Stremellachs','Fisch mit Pesto & Brotkrümeln überbacken',
+'Fischstäbchen','Nudeln mit Salbei-Butter','Nudeln mit Salbei-Gorgonzola-Soße mit Walnüssen','Nudeln mit Lachs-Sahne-Soße','Nudeln mit Sahne-Soße',
+'Nudeln mit Tomatensoße','Nudeln mit Mandel-Parmesan-Basilikum-Soße','Nudeln mit asiatische Nudeln', 'Nudeln mit mit getr. Tomaten, Schafskäse & Rucola',
+'Grillkäse', 'Ofenkäse','Gebackener Schafskäse','Camembert','Camembertsticks', 'gebackener Camembert','Brötchen mit Obatzter','Brötchen mit Antipasti',
+'Brötchen mit Guacamole','Brötchen Honig/Marmelade/Käse usw.', 'Laugenstange mit Käse','Brusmchetta','Partybrot','Pizzabrötchen' ,'Sandwich' , 
+'Baguettes mit Campignons', 'Toastbrötchen mit angebratenen Tomaten', 'Basilikum und Käse überbacken', 'Mais' , 'Champignons in Schmand' , 'Feldsalat' , 
+'Rucola' , 'Aldisalat' , 'Honig-Senf-Dressing' , 'Holunderdressing' , 'Salatwraps' , 'Salatschälchen mit Nudeln' , 'Wraps' , 'Quesadillas' , 
+'Überbackene Wraps mit Räuchertofu (s.F.)' , 'Schupfnudeln' , 'Spätzle' , 'Käsespätzle'  , 'Maras Gnocchi mit Gemüse und Parmigiano' , 'Tsaziki' , 
+'Tortellini-Kichererbsen-Salat' , 'Flammkuchen' ,'Blätterteigschnecken' , 'Langos' , 'Pommes mit Käse' , 'Kartoffelwürfel' , 'Kartoffelsalat' , 
+'Curry mit Kokosmilch' , 'Curry mit Mango (s. F.)' , 'Caras Tofu-Kichererbsen-Curry','Ingwercookie-Schicht-Dessert', 'Portugisische Vanilletörtchen', 
+'Pudding', 'Milchreis mit Ingwer', 'Pfannkuchen','Kaiserschmarrn' , 'Dampfnudel' , 'Apfeltasche' , 'Pfannkuchen', 'Omis Apfelstrudel', 'Bratapfelsmoothie']
+
+
+vorspeise = ['Toskanische Brotsuppe', 'Basilikumsuppe', 'Tomate-Reis-Suppe', 'Bruschetta', 
+'Baguettes mit Campignons', 'Mais' , 'Champignons in Schmand' , 'Feldsalat' , 'Salat mit Lachswürfeln'
+'Rucola' , 'Salat mit Honig-Senf-Dressing' , 'Salat mit Holunderdressing' , 'Tsaziki' ,'Blätterteigschnecken' , 'Kartoffelsalat', 
+'Tortellini-Kichererbsen-Salat' ]
+
+hauptspeise = ['Lachsfilet','Fisch mit Pesto & Brotkrümeln überbacken',
+'Fischstäbchen','Nudeln mit Salbei-Butter','Nudeln mit Salbei-Gorgonzola-Soße mit Walnüssen','Nudeln mit Lachs-Sahne-Soße','Nudeln mit Sahne-Soße',
+'Nudeln mit Tomatensoße','Nudeln mit Mandel-Parmesan-Basilikum-Soße','Nudeln mit asiatische Nudeln', 'Nudeln mit mit getr. Tomaten, Schafskäse & Rucola',
+'Grillkäse', 'Ofenkäse','Gebackener Schafskäse','Camembertsticks', 'gebackener Camembert','Pizzabrötchen' ,
+'Baguettes mit Campignons', 'Salatwraps' , 'Salatschälchen mit Nudeln' , 'Wraps' , 'Quesadillas' , 
+'Überbackene Wraps mit Räuchertofu (s.F.)' , 'Schupfnudeln' , 'Spätzle' , 'Käsespätzle'  , 'Maras Gnocchi mit Gemüse und Parmigiano' ,
+'Flammkuchen' , 'Langos' , 'Pommes mit Käse' , 'Kartoffelwürfel' , 'Curry mit Kokosmilch' , 'Curry mit Mango (s. F.)' , 'Caras Tofu-Kichererbsen-Curry']
+
+nachspeise = ['Ingwercookie-Schicht-Dessert', 'Portugisische Vanilletörtchen', 
+'Pudding', 'Milchreis mit Ingwer', 'Pfannkuchen','Kaiserschmarrn' , 'Dampfnudel' , 'Apfeltasche' , 'Pfannkuchen', 'Omis Apfelstrudel', 'Bratapfelsmoothie']
+
+code = 0 
+
+MoG = input ('Möchtest du ein Menü (M) oder ein Gericht (G)?\n')
+
+if MoG == 'm' or MoG == 'M':
+    v = randint(0,len(vorspeise))
+    h = randint(0,len(hauptspeise))
+    n = randint(0,len(nachspeise))
+    print('Hier ist dein Menü:')
+    print ('Vorspeise:')
+    print(vorspeise[v])
+    print ('Hautpspeise:')
+    print(hauptspeise[h])
+    print ('Nachspeise:')
+    print(nachspeise[n])
+elif MoG == 'g' or MoG == 'G':
+    anzahl = input('Wie viele Gerichte willt du (1 bis 3)? \n')
+    if anzahl == '1':
+        print('Hier ist dein Gericht:')
+        x = randint(0,len(essen))
+        print(essen[x])
+    elif anzahl == '2':
+        x = randint(0,len(essen))
+        y = randint(0,len(essen))
+        print('Hier sind deine 2 Gericht:')
+        print(essen[x])
+        print(essen[y])
+    elif anzahl == '3':
+        x = randint(0,len(essen))
+        y = randint(0,len(essen))
+        z = randint(0,len(essen))
+        print('Hier sind deine 3 Gerichte:')
+        print(essen[x])
+        print(essen[y])
+        print(essen[z])
+else:
+    print ('Ungültige Eingabe')
+
